@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Controls.OfflineIndicator">
+    
+    <ContentView.Content>
+        <Frame Margin="0" Padding="8">
+
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#ffa100" Offset="0.1" />
+                    <GradientStop Color="#ffb638" Offset="1.1" />
+                </LinearGradientBrush>
+            </Frame.Background>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <ActivityIndicator HeightRequest="20" WidthRequest="20" IsRunning="True" Color="White" />
+                <Label
+                    FontSize="14"
+                    TextColor="White"
+                    Text="Venter på internet forbindelse">
+                </Label>
+            </StackLayout>
+
+        </Frame>
+    </ContentView.Content>
+    
+</ContentView>

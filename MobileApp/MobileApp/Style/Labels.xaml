@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:Style="clr-namespace:MobileApp.Style"
+                    x:Class="MobileApp.Style.Labels">
+    
+    <ResourceDictionary.MergedDictionaries>
+        <Style:Colors />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="Label" x:Key="Heading-Page">
+        <Setter Property="FontFamily" Value="comfortaa-bold" />
+        <Setter Property="FontSize" Value="31" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="TextColor" Value="{StaticResource DarkColor}" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="Heading-Black">
+        <Setter Property="FontFamily" Value="roboto-black" />
+        <Setter Property="FontSize" Value="25" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="TextColor" Value="{StaticResource DarkColor}" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="Heading-Bold">
+        <Setter Property="FontFamily" Value="roboto-bold" />
+        <Setter Property="FontSize" Value="25" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="TextColor" Value="{StaticResource DarkColor}" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="Paragraph">
+        <Setter Property="FontFamily" Value="roboto-regular" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="TextColor" Value="{StaticResource DarkColor}" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="Paragraph-Bold">
+        <Setter Property="FontFamily" Value="roboto-bold" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="TextColor" Value="{StaticResource DarkColor}" />
+    </Style>
+</ResourceDictionary>

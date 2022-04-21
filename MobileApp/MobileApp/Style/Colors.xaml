@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="MobileApp.Style.Colors">
+
+    <Color x:Key="ShellColor">#00472F</Color>
+
+    <Color x:Key="PrimaryColor">#00472F</Color>
+    <Color x:Key="SecondaryColor">#007D53</Color>
+    <Color x:Key="DangerColor">#E03434</Color>
+    <Color x:Key="GrayColor">#2f2e41</Color>
+    <Color x:Key="DarkColor">#22232E</Color>
+    <Color x:Key="DarkGreyColor">#E3E3E3</Color>
+    <Color x:Key="LightGreyColor">#F4F4F4</Color>
+    <Color x:Key="WhiteColor">#FFFFFF</Color>
+
+</ResourceDictionary>

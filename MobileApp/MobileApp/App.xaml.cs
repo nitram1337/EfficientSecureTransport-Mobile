@@ -1,8 +1,10 @@
-﻿using MobileApp.Services;
+﻿using Xamarin.Forms;
+
 using MobileApp.Views;
-using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using MobileApp.Services.Credentials;
+using MobileApp.Services.Identity;
+using MobileApp.Services.RequestProvider;
+using MobileApp.Services.OpenUrl;
 
 namespace MobileApp
 {
@@ -12,9 +14,20 @@ namespace MobileApp
         public App()
         {
             InitializeComponent();
+            RegisterDependencies();
 
-            DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            // MonkeyCache
+            MonkeyCache.FileStore.Barrel.ApplicationId = "XamarinForms-App";
+
+            MainPage = new StartPage();
+        }
+
+        private void RegisterDependencies()
+        {
+            DependencyService.Register<ICredentialsService, CredentialsService>();
+            DependencyService.Register<IIdentityService, IdentityService>();
+            DependencyService.Register<IRequestProviderService, RequestProviderService>();
+            DependencyService.Register<IOpenUrlService, OpenUrlService>();
         }
 
         protected override void OnStart()

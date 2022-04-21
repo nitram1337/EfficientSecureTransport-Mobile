@@ -1,22 +1,38 @@
-﻿using MobileApp.Models;
-using MobileApp.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using Xamarin.Forms;
 
 namespace MobileApp.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
-
         bool isBusy = false;
         public bool IsBusy
         {
             get { return isBusy; }
             set { SetProperty(ref isBusy, value); }
+        }
+
+        bool isConnected;
+        public bool IsConnected
+        {
+            get { return isConnected; }
+            set { SetProperty(ref isConnected, value); }
+        }
+
+        bool isButtonClickable;
+        public bool IsButtonClickable
+        {
+            get { return isButtonClickable; }
+            set { SetProperty(ref isButtonClickable, value); }
+        }
+
+        bool isButtonVisible = true;
+        public bool IsButtonVisible
+        {
+            get { return isButtonVisible; }
+            set { SetProperty(ref isButtonVisible, value); }
         }
 
         string title = string.Empty;
@@ -40,6 +56,7 @@ namespace MobileApp.ViewModels
         }
 
         #region INotifyPropertyChanged
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
@@ -49,6 +66,7 @@ namespace MobileApp.ViewModels
 
             changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
         #endregion
     }
 }

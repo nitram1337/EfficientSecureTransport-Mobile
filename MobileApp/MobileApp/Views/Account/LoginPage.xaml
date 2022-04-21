@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:base="clr-namespace:MobileApp.ViewModels"
+             xmlns:fa="clr-namespace:FontAwesome"
+             xmlns:style="clr-namespace:MobileApp.Style"
+             xmlns:controls="clr-namespace:MobileApp.Controls"
+             xmlns:viewmodels="clr-namespace:MobileApp.ViewModels.Account"
+             x:Class="MobileApp.Views.Account.LoginPage"
+             x:DataType="viewmodels:LoginViewModel"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#FFFFFF">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <style:Labels />
+                <style:Buttons />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <controls:OfflineIndicator x:DataType="base:BaseViewModel" IsVisible="{Binding IsConnected}" />
+
+            <ScrollView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <StackLayout BackgroundColor="{StaticResource WhiteColor}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                            <ContentView Padding="0,100,0,40" VerticalOptions="FillAndExpand">
+                                <Image Source="undraw_login.png" VerticalOptions="Center" HeightRequest="220" />
+                            </ContentView>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout  Grid.Row="1" BackgroundColor="{StaticResource WhiteColor}" Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+
+                        <Label Text="Login page" Style="{StaticResource Heading-Black}" HorizontalTextAlignment="Center" FontSize="28" />
+                        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim tristique morbi eu est nibh egestas." Style="{StaticResource Paragraph}" TextColor="Gray" HorizontalTextAlignment="Center"></Label>
+
+                        <Button ContentLayout="Right, 35" 
+                                Style="{StaticResource PrimaryButton}"
+                                IsVisible="{Binding IsButtonVisible}"
+                                IsEnabled="{Binding IsButtonClickable}"
+                                xct:ShadowEffect.Color="{StaticResource DarkColor}"
+                                xct:ShadowEffect.Radius="10"
+                                xct:ShadowEffect.Opacity="1"
+                                xct:TouchEffect.AnimationDuration="190"
+                                xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicOut}"
+                                xct:TouchEffect.PressedOpacity="0"
+                                xct:TouchEffect.PressedScale="0.90"
+                                xct:TouchEffect.Command="{Binding LoginCommand}"
+                                Padding="40, 10, 40, 10" Margin="60,29,60,44" FontSize="Large" Text="Login" VerticalOptions="End" HorizontalOptions="CenterAndExpand">
+                            <Button.ImageSource>
+                                <FontImageSource FontFamily="FA-solid" Glyph="{Static fa:IconFont.SignInAlt}" Size="27" />
+                            </Button.ImageSource>
+                        </Button>
+
+                        <ActivityIndicator Margin="0,29,0,0"  IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="{StaticResource PrimaryColor}"/>
+
+                        <Label IsVisible="{Binding IsButtonVisible}"
+                               IsEnabled="{Binding IsButtonClickable}"
+                               Style="{StaticResource Paragraph-Bold}" 
+                               TextColor="Gray" FontSize="16" HorizontalTextAlignment="Center" xct:TouchEffect.AnimationDuration="190"
+                                           xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicOut}"
+                                           xct:TouchEffect.PressedOpacity="0"
+                                           xct:TouchEffect.PressedScale="0.90"
+                                           xct:TouchEffect.Command="{Binding RegisterCommand}" >
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Har du ikke en konto?" />
+                                    <Span Text=" " />
+                                    <Span  xct:TouchEffect.AnimationDuration="190"
+                                           xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicOut}"
+                                           xct:TouchEffect.PressedOpacity="0"
+                                           xct:TouchEffect.PressedScale="0.90"
+                                           xct:TouchEffect.Command="{Binding RegisterCommand}" 
+                                           Text="Sign up" TextColor="{StaticResource PrimaryColor}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+
+    </ContentPage.Content>
+    
+</ContentPage>

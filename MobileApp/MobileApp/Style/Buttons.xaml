@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:Style="clr-namespace:MobileApp.Style"
+                    x:Class="MobileApp.Style.Buttons">
+    
+    <ResourceDictionary.MergedDictionaries>
+        <Style:Colors />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="Button" x:Key="PrimaryButton">
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontFamily" Value="roboto-black" />
+        <Setter Property="HeightRequest" Value="63" />
+        <Setter Property="CornerRadius" Value="50" />
+        <Setter Property="FontSize" Value="22" />
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+        <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+        <Setter Property="Margin" Value="10,20,10,0" />
+    </Style>
+
+    <Style TargetType="Button" x:Key="DangerButton">
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontFamily" Value="roboto-black" />
+        <Setter Property="HeightRequest" Value="63" />
+        <Setter Property="CornerRadius" Value="50" />
+        <Setter Property="FontSize" Value="22" />
+        <Setter Property="BackgroundColor" Value="{StaticResource DangerColor}" />
+        <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+        <Setter Property="Margin" Value="10,20,10,0" />
+    </Style>
+
+</ResourceDictionary>
