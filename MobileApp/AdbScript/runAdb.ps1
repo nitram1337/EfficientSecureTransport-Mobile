@@ -9,9 +9,10 @@ if ($PATH -notlike "*"+$adb_path+"*"){
 	[Environment]::SetEnvironmentVariable("PATH", "$PATH;$adb_path")
 
 	Write-Warning "Running the adb reverse..."
-	adb reverse tcp:7102 tcp:7102
 
-	adb reverse tcp:6001 tcp:6001
+	adb reverse tcp:7103 tcp:7103 # Identity
+
+	adb reverse tcp:7101 tcp:7101 # ApiGateway
 
 	Write-Output "DONE"
 	Write-Warning "Do NOT close this window. You need to have it open, while you are developing mobile client."

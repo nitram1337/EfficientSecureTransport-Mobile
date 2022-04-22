@@ -41,7 +41,7 @@ namespace MobileApp.Droid
     }
 
     [Activity(NoHistory = true, LaunchMode = LaunchMode.SingleTop)]
-    [IntentFilter(new[] { Intent.ActionView }, Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable }, DataScheme = GlobalSettings.DefaultClientUri)]
+    [IntentFilter(new[] { Intent.ActionView }, Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable }, DataScheme = GlobalSettings.DefaultDataScheme)]
     public class WebAuthenticationCallbackActivity : Xamarin.Essentials.WebAuthenticatorCallbackActivity
     {
     }

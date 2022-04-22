@@ -4,22 +4,31 @@
     {
         public static GlobalSettings Instance { get; set; } = new GlobalSettings();
 
-        // TODO: Settings for Identity, Client and Api (e.g. Uri, Port)
-        // Identity and Api has the same Uri because they are running on local machine.
-        #region Default values for Identity, Api and App DataScheme
+        // TODO: Settings for Microservices (e.g. Uri, Port)
+        // Identity and Api Gateway has the same Uri.
+        #region Default values for Microservices and DataScheme for MobileApp
 
-        private const string DefaultIdentityUri = "127.0.0.1";                  // Should match with the launchUrl from                 -> EST.API.Identity / Properties / launchSettings.json
-        private const int DefaultIdentityPort = 7102;                           // Should match with the port of the launchUrl from     -> EST.API.Identity / Properties / launchSettings.json
-        private const int DefaultApiPort = 6001;                                // Should match with the port of the launchUrl from     -> Api              / Properties / launchsettings.json
+        private const string DefaultUri = "127.0.0.1";                   // Should match with the launchUrl from                 -> (any Microservice) / Properties / launchSettings.json - !! Without Port !!
+        private const int DefaultApiGatewayPort = 7101;                  // Should match with the port of the launchUrl from     -> EST.API.Gateway    / Properties / launchsettings.json
+        private const int DefaultIdentityPort = 7103;                    // Should match with the port of the launchUrl from     -> EST.API.IdentityMS / Properties / launchSettings.json
+        
+        public const string DefaultDataScheme = "com.mrsolutions.est";   // Should match with the Package name from              -> MobileApp.Android  / Properties / AndroidManifest /  package=""
 
+        #endregion Default values for Microservices and DataScheme for MobileApp 
 
-        public const string DefaultClientUri = "com.companyname.est";           // Should match with the ClientUri from                 -> EST.API.Identity / appsettings.json / "Clients": { }  "XamarinForms": { } 
-
-        #endregion Default values for Identity, Api and App DataScheme 
-
+        private string _baseApiGatewayUri;
         private string _baseIdentityUri;
-        private string _baseApiUri;
         private string _baseClientUri;
+
+        public string BaseApiGatewayUri
+        {
+            get => _baseApiGatewayUri;
+            set
+            {
+                _baseApiGatewayUri = value;
+                UpdateApiGatewayEndpoint(_baseApiGatewayUri);
+            }
+        }
 
         public string BaseIdentityUri
         {
@@ -28,16 +37,6 @@
             {
                 _baseIdentityUri = value;
                 UpdateIdentityEndpoint(_baseIdentityUri);
-            }
-        }
-
-        public string BaseApiUri
-        {
-            get => _baseApiUri;
-            set
-            {
-                _baseApiUri = value;
-                UpdateApiEndpoint(_baseApiUri);
             }
         }
 
@@ -53,9 +52,9 @@
 
         public GlobalSettings()
         {
-            BaseIdentityUri = $"https://{DefaultIdentityUri}:{DefaultIdentityPort}";
-            BaseApiUri = $"https://{DefaultIdentityUri}:{DefaultApiPort}";
-            BaseClientUri = DefaultClientUri;
+            BaseIdentityUri = $"https://{DefaultUri}:{DefaultIdentityPort}";
+            BaseApiGatewayUri = $"https://{DefaultUri}:{DefaultApiGatewayPort}";
+            BaseClientUri = DefaultDataScheme;
         }
 
         public string ClientId { get { return "EST.MobileApp.XamarinForms"; } }
@@ -72,8 +71,12 @@
 
 
         public string RouteApiEndpoint { get; set; }
-        public string UserApiEndpoint { get; set; }
 
+
+        private void UpdateApiGatewayEndpoint(string baseUri)
+        {
+            RouteApiEndpoint = $"{baseUri}/api/route";
+        }
 
         private void UpdateIdentityEndpoint(string baseUri)
         {
@@ -82,17 +85,11 @@
             ForgotPasswordUri = $"{baseUri}/Account/ForgotPassword";
         }
 
-        private void UpdateApiEndpoint(string baseUri)
-        {
-            RouteApiEndpoint = $"{baseUri}/api/route";
-            UserApiEndpoint = $"{baseUri}/api/user";
-        }
-
         private void UpdateClientEndpoint(string baseUri)
         {
             ClientUri = baseUri;
-            RedirectUri = $"{baseUri}:/signin-oidc";
-            PostLogoutRedirectUri = $"{baseUri}:/signout-oidc";
+            RedirectUri = $"{baseUri}:/signin-oidc";                                                 // Should match with the RedirectUris from                 -> EST.API.IdentityMS / Config / Clients() { Xamarin Forms Client } 
+            PostLogoutRedirectUri = $"{baseUri}:/signout-oidc";                                      // Should match with the PostLogoutRedirectUris from       -> EST.API.IdentityMS / Config / Clients() { Xamarin Forms Client } 
         }
     }
 }
