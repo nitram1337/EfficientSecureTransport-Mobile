@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:base="clr-namespace:MobileApp.ViewModels"
+             xmlns:fa="clr-namespace:FontAwesome"
+             xmlns:style="clr-namespace:MobileApp.Style"
+             xmlns:viewmodels="clr-namespace:MobileApp.ViewModels.Route"
+             x:Class="MobileApp.Views.Route.CurrentRoutePage"
+             Title="Current route"
+             BackgroundColor="#FFFFFF">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <style:Labels />
+                <style:Buttons />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <StackLayout Orientation="Vertical" Margin="0,20,0,5">
+                <Label Style="{StaticResource Paragraph}" Text="You are on the following route:" FontSize="23" HorizontalTextAlignment="Center" />
+            </StackLayout>
+
+            <ScrollView>
+                <StackLayout>
+                    <Frame BackgroundColor="#ededed" Padding="0" Margin="17,10,17,0" CornerRadius="15">
+                        <StackLayout Orientation="Horizontal">
+                            <BoxView CornerRadius="15,0,15,0" WidthRequest="15" BackgroundColor="#FF8000">
+
+                            </BoxView>
+                            
+                            <Grid Padding="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+
+                                <Label Grid.Column="1" Grid.Row="0" Style="{StaticResource Paragraph-Bold}" Text="Ukraine" />
+                                <Label Grid.Column="1" Grid.Row="2" Style="{StaticResource Paragraph-Bold}" Text="19-04-2022" FontSize="12" />
+
+                                <Label Grid.Column="4" HorizontalTextAlignment="Center" Grid.Row="0" Style="{StaticResource Paragraph-Bold}" Text="Route nr." FontSize="14" TextColor="{StaticResource PrimaryColor}" />
+                                <Label Grid.Column="4" HorizontalTextAlignment="Center" Grid.Row="0" Grid.RowSpan="3" Style="{StaticResource Heading-Black}" Text="3" Margin="0,5,0,0" FontSize="50" TextColor="{StaticResource PrimaryColor}" />
+                            </Grid>
+                        </StackLayout>
+                        
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+        
+        
+    </ContentPage.Content>
+</ContentPage>

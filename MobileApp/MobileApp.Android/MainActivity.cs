@@ -15,7 +15,7 @@ namespace MobileApp.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            this.Window.SetStatusBarColor(Android.Graphics.Color.Rgb(65, 59, 163));
+            this.Window.SetStatusBarColor(Android.Graphics.Color.Rgb(255, 255, 255));
 
             base.OnCreate(savedInstanceState);
 

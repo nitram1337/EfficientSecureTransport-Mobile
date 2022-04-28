@@ -10,26 +10,25 @@
 
     <ResourceDictionary>
         <Style x:Key="ShellStyle" TargetType="Element">
-            <Setter Property="Shell.BackgroundColor" Value="{StaticResource ShellColor}" />
-            <Setter Property="Shell.ForegroundColor" Value="White" />
-            <Setter Property="Shell.TitleColor" Value="White" />
+            <Setter Property="Shell.BackgroundColor" Value="{StaticResource WhiteColor}" />
+            <Setter Property="Shell.ForegroundColor" Value="Black" />
+            <Setter Property="Shell.TitleColor" Value="Black" />
             <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
             <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
-            <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource ShellColor}" />
-            <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+            <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource WhiteColor}" />
+            <Setter Property="Shell.TabBarForegroundColor" Value="Black"/>
             <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
             <Setter Property="Shell.TabBarTitleColor" Value="White"/>
         </Style>
         <Style TargetType="TabBar" BasedOn="{StaticResource ShellStyle}" />
         <Style TargetType="FlyoutItem" BasedOn="{StaticResource ShellStyle}" />
 
-        <!--
-            Default Styles for all Flyout Items
-            https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyoutitem-and-menuitem-style-classes
-            -->
         <Style Class="FlyoutItemLabelStyle" TargetType="Label">
             <Setter Property="TextColor" Value="White"></Setter>
+            <Setter Property="FontFamily" Value="roboto-bold"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
         </Style>
+        
         <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
             <Setter Property="VisualStateManager.VisualStateGroups">
                 <VisualStateGroupList>

@@ -32,19 +32,19 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
-                    <StackLayout BackgroundColor="{StaticResource WhiteColor}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-
-
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                            <ContentView Padding="0,100,0,40" VerticalOptions="FillAndExpand">
-                                <Image Source="undraw_login.png" VerticalOptions="Center" HeightRequest="220" />
+                    <StackLayout BackgroundColor="{StaticResource WhiteColor}" VerticalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal" Margin="50,40,50,0">
+                            <Label Text="Log in" Style="{StaticResource Heading-Page}" HorizontalOptions="StartAndExpand" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <ContentView Padding="0,1,0,20" VerticalOptions="FillAndExpand">
+                                <Image Source="est_login.png" VerticalOptions="Center" HeightRequest="300" />
                             </ContentView>
                         </StackLayout>
                     </StackLayout>
 
                     <StackLayout  Grid.Row="1" BackgroundColor="{StaticResource WhiteColor}" Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-
-                        <Label Text="Login page" Style="{StaticResource Heading-Black}" HorizontalTextAlignment="Center" FontSize="28" />
+                        
                         <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim tristique morbi eu est nibh egestas." Style="{StaticResource Paragraph}" TextColor="Gray" HorizontalTextAlignment="Center"></Label>
 
                         <Button ContentLayout="Right, 35" 
@@ -59,7 +59,7 @@
                                 xct:TouchEffect.PressedOpacity="0"
                                 xct:TouchEffect.PressedScale="0.90"
                                 xct:TouchEffect.Command="{Binding LoginCommand}"
-                                Padding="40, 10, 40, 10" Margin="60,29,60,44" FontSize="Large" Text="Login" VerticalOptions="End" HorizontalOptions="CenterAndExpand">
+                                Padding="40, 10, 40, 10" Margin="60,29,60,44" FontSize="Large" Text="Sign in" VerticalOptions="End" HorizontalOptions="CenterAndExpand">
                             <Button.ImageSource>
                                 <FontImageSource FontFamily="FA-solid" Glyph="{Static fa:IconFont.SignInAlt}" Size="27" />
                             </Button.ImageSource>
@@ -69,7 +69,7 @@
 
                         <Label IsVisible="{Binding IsButtonVisible}"
                                IsEnabled="{Binding IsButtonClickable}"
-                               Style="{StaticResource Paragraph-Bold}" 
+                               Style="{StaticResource Paragraph}" 
                                TextColor="Gray" FontSize="16" HorizontalTextAlignment="Center" xct:TouchEffect.AnimationDuration="190"
                                            xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicOut}"
                                            xct:TouchEffect.PressedOpacity="0"

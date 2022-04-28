@@ -4,6 +4,7 @@
        xmlns:fa="clr-namespace:FontAwesome"
        xmlns:style="clr-namespace:MobileApp.Style"
        xmlns:account="clr-namespace:MobileApp.Views.Account"
+       xmlns:route="clr-namespace:MobileApp.Views.Route"
        xmlns:controls="clr-namespace:MobileApp.Controls"
        x:Class="MobileApp.DriverShell"
        Title="MobileApp">
@@ -22,22 +23,34 @@
         </ResourceDictionary>
     </Shell.Resources>
 
+
+    <FlyoutItem Title="Current route">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="FA-solid" Glyph="{Static fa:IconFont.Route}" Size="Large" Color="{StaticResource PrimaryColor}" />
+        </FlyoutItem.Icon>
+        <ShellContent Route="CurrentRoutePage" ContentTemplate="{DataTemplate route:CurrentRoutePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="All routes">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="FA-solid" Glyph="{Static fa:IconFont.ClipboardList}" Size="Large" Color="{StaticResource PrimaryColor}" />
+        </FlyoutItem.Icon>
+        <ShellContent Route="ListRoutesPage" ContentTemplate="{DataTemplate route:ListRoutesPage}" />
+    </FlyoutItem>
+
     <FlyoutItem Title="My profile">
         <FlyoutItem.Icon>
-            <FontImageSource FontFamily="FA-solid" Glyph="{Static fa:IconFont.LaughBeam}" Size="Large" />
+            <FontImageSource FontFamily="FA-solid" Glyph="{Static fa:IconFont.LaughBeam}" Size="Large" Color="{StaticResource PrimaryColor}" />
         </FlyoutItem.Icon>
         <ShellContent Route="ProfilePage" ContentTemplate="{DataTemplate account:ProfilePage}" />
     </FlyoutItem>
 
-    <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
-    <MenuItem Text="Sign out" Clicked="OnSignoutClicked">
-        <MenuItem.IconImageSource>
-            <FontImageSource FontFamily="FA-solid" Glyph="{Static fa:IconFont.SignOutAlt}" Size="Large" />
-        </MenuItem.IconImageSource>
-    </MenuItem>
-
     <TabBar>
         <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate account:LoginPage}" />
     </TabBar>
+
+    <Shell.FlyoutFooter>
+        <controls:FlyoutFooter />
+    </Shell.FlyoutFooter>
 
 </Shell>
