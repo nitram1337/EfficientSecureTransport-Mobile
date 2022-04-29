@@ -4,9 +4,9 @@ using Xamarin.Forms.Xaml;
 namespace MobileApp.Style
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Colors : ResourceDictionary
+    public partial class Variables : ResourceDictionary
     {
-        public Colors()
+        public Variables()
         {
             InitializeComponent();
         }

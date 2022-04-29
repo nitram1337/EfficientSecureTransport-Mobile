@@ -5,41 +5,56 @@
                     x:Class="MobileApp.Style.Labels">
     
     <ResourceDictionary.MergedDictionaries>
-        <Style:Colors />
+        <Style:Variables />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style TargetType="Label" x:Key="Heading-Page">
+    <Style TargetType="Label" x:Key="Heading-Comfortaa">
         <Setter Property="FontFamily" Value="comfortaa-bold" />
-        <Setter Property="FontSize" Value="35" />
-        <Setter Property="Padding" Value="0" />
-        <Setter Property="TextColor" Value="{StaticResource DarkColor}" />
+        <Setter Property="FontSize" Value="{StaticResource Font-Size-xxl}" />
+        <Setter Property="TextColor" Value="{StaticResource Dark-Color}" />
     </Style>
 
-    <Style TargetType="Label" x:Key="Heading-Black">
-        <Setter Property="FontFamily" Value="roboto-black" />
-        <Setter Property="FontSize" Value="25" />
-        <Setter Property="Padding" Value="0" />
-        <Setter Property="TextColor" Value="{StaticResource DarkColor}" />
+    <Style TargetType="Label" x:Key="Heading-Regular">
+        <Setter Property="FontFamily" Value="roboto-regular" />
+        <Setter Property="FontSize" Value="{StaticResource Font-Size-s}" />
+        <Setter Property="TextColor" Value="{StaticResource Dark-Color}" />
     </Style>
 
     <Style TargetType="Label" x:Key="Heading-Bold">
         <Setter Property="FontFamily" Value="roboto-bold" />
-        <Setter Property="FontSize" Value="25" />
+        <Setter Property="FontSize" Value="{StaticResource Font-Size-s}" />
         <Setter Property="Padding" Value="0" />
-        <Setter Property="TextColor" Value="{StaticResource DarkColor}" />
+        <Setter Property="TextColor" Value="{StaticResource Dark-Color}" />
     </Style>
 
-    <Style TargetType="Label" x:Key="Paragraph">
+    <Style TargetType="Label" x:Key="Heading-Black">
+        <Setter Property="FontFamily" Value="roboto-black" />
+        <Setter Property="FontSize" Value="{StaticResource Font-Size-s}" />
+        <Setter Property="TextColor" Value="{StaticResource Dark-Color}" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="Paragraph-Comfortaa">
+        <Setter Property="FontFamily" Value="comfortaa-bold" />
+        <Setter Property="FontSize" Value="{StaticResource Font-Size-xxs}" />
+        <Setter Property="TextColor" Value="{StaticResource Dark-Color}" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="Paragraph-Regular">
         <Setter Property="FontFamily" Value="roboto-regular" />
-        <Setter Property="FontSize" Value="18" />
-        <Setter Property="Padding" Value="0" />
-        <Setter Property="TextColor" Value="{StaticResource DarkColor}" />
+        <Setter Property="FontSize" Value="{StaticResource Font-Size-xxs}" />
+        <Setter Property="TextColor" Value="{StaticResource Dark-Color}" />
     </Style>
 
     <Style TargetType="Label" x:Key="Paragraph-Bold">
         <Setter Property="FontFamily" Value="roboto-bold" />
-        <Setter Property="FontSize" Value="18" />
-        <Setter Property="Padding" Value="0" />
-        <Setter Property="TextColor" Value="{StaticResource DarkColor}" />
+        <Setter Property="FontSize" Value="{StaticResource Font-Size-xxs}" />
+        <Setter Property="TextColor" Value="{StaticResource Dark-Color}" />
     </Style>
+
+    <Style TargetType="Label" x:Key="Paragraph-Black">
+        <Setter Property="FontFamily" Value="roboto-black" />
+        <Setter Property="FontSize" Value="{StaticResource Font-Size-xxs}" />
+        <Setter Property="TextColor" Value="{StaticResource Dark-Color}" />
+    </Style>
+    
 </ResourceDictionary>

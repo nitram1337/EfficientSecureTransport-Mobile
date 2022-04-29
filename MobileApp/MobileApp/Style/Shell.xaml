@@ -5,43 +5,43 @@
                     x:Class="MobileApp.Style.Shell">
     
     <ResourceDictionary.MergedDictionaries>
-        <Style:Colors />
+        <Style:Variables />
     </ResourceDictionary.MergedDictionaries>
 
     <ResourceDictionary>
         <Style x:Key="ShellStyle" TargetType="Element">
-            <Setter Property="Shell.BackgroundColor" Value="{StaticResource WhiteColor}" />
-            <Setter Property="Shell.ForegroundColor" Value="Black" />
-            <Setter Property="Shell.TitleColor" Value="Black" />
-            <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
-            <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
-            <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource WhiteColor}" />
-            <Setter Property="Shell.TabBarForegroundColor" Value="Black"/>
-            <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
-            <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+            <Setter Property="Shell.BackgroundColor" Value="{StaticResource White-Color}" />
+            <Setter Property="Shell.ForegroundColor" Value="{StaticResource Dark-Color}" />
+            <Setter Property="Shell.TitleColor" Value="{StaticResource Dark-Color}" />
+            <Setter Property="Shell.DisabledColor" Value="{StaticResource Unselected-Color}" />
+            <Setter Property="Shell.UnselectedColor" Value="{StaticResource Unselected-Color}" />
+            <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource White-Color}" />
+            <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource Dark-Color}" />
+            <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource Unselected-Color}" />
+            <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource White-Color}" />
         </Style>
         <Style TargetType="TabBar" BasedOn="{StaticResource ShellStyle}" />
         <Style TargetType="FlyoutItem" BasedOn="{StaticResource ShellStyle}" />
 
         <Style Class="FlyoutItemLabelStyle" TargetType="Label">
-            <Setter Property="TextColor" Value="White"></Setter>
-            <Setter Property="FontFamily" Value="roboto-bold"></Setter>
-            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="TextColor" Value="{StaticResource White-Color}"></Setter>
+            <Setter Property="FontFamily" Value="roboto-regular"></Setter>
+            <Setter Property="FontSize" Value="{StaticResource Font-Size-xs}"></Setter>
         </Style>
-        
+
         <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
             <Setter Property="VisualStateManager.VisualStateGroups">
                 <VisualStateGroupList>
                     <VisualStateGroup x:Name="CommonStates">
                         <VisualState x:Name="Normal">
                             <VisualState.Setters>
-                                <Setter Property="BackgroundColor" Value="{x:OnPlatform UWP=Transparent, iOS=White}" />
-                                <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource ShellColor}" />
+                                <Setter Property="BackgroundColor" Value="{ x:OnPlatform UWP=Transparent, iOS=White }" />
+                                <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary-Color}" />
                             </VisualState.Setters>
                         </VisualState>
                         <VisualState x:Name="Selected">
                             <VisualState.Setters>
-                                <Setter Property="BackgroundColor" Value="{StaticResource ShellColor}" />
+                                <Setter Property="BackgroundColor" Value="{StaticResource Primary-Color}" />
                             </VisualState.Setters>
                         </VisualState>
                     </VisualStateGroup>

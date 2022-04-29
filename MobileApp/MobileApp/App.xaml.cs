@@ -5,6 +5,7 @@ using MobileApp.Services.Credentials;
 using MobileApp.Services.Identity;
 using MobileApp.Services.RequestProvider;
 using MobileApp.Services.OpenUrl;
+using MobileApp.Services.Route;
 
 namespace MobileApp
 {
@@ -28,6 +29,8 @@ namespace MobileApp
             DependencyService.Register<IIdentityService, IdentityService>();
             DependencyService.Register<IRequestProviderService, RequestProviderService>();
             DependencyService.Register<IOpenUrlService, OpenUrlService>();
+
+            DependencyService.Register<IRouteService, RouteService>();
         }
 
         protected override void OnStart()

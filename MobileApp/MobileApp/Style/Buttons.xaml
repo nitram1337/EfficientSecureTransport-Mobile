@@ -1,33 +1,95 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
                     xmlns:Style="clr-namespace:MobileApp.Style"
                     x:Class="MobileApp.Style.Buttons">
     
     <ResourceDictionary.MergedDictionaries>
-        <Style:Colors />
+        <Style:Variables />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style TargetType="Button" x:Key="PrimaryButton">
+    <x:Int16 x:Key="Button-Height-Request">63</x:Int16>
+    <x:Int16 x:Key="Button-Corner-Radius">50</x:Int16>
+    <x:Int16 x:Key="Button-ShadowEffect-Radius">10</x:Int16>
+    <x:Int16 x:Key="Button-ShadowEffect-Opacity">1</x:Int16>
+    <x:Int16 x:Key="Button-TouchEffect-PressedOpacity">0</x:Int16>
+    <x:Double x:Key="Button-TouchEffect-PressedScale">0.90</x:Double>
+
+    <Style TargetType="Button" x:Key="Primary-Button">
         <Setter Property="FontAttributes" Value="Bold" />
         <Setter Property="FontFamily" Value="roboto-black" />
-        <Setter Property="HeightRequest" Value="63" />
-        <Setter Property="CornerRadius" Value="50" />
-        <Setter Property="FontSize" Value="22" />
-        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
-        <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+        <Setter Property="HeightRequest" Value="{StaticResource Button-Height-Request}" />
+        <Setter Property="CornerRadius" Value="{StaticResource Button-Corner-Radius}" />
+        <Setter Property="FontSize" Value="{StaticResource Font-Size-xs}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Primary-Color}" />
+        <Setter Property="TextColor" Value="{StaticResource White-Color}" />
         <Setter Property="Margin" Value="10,20,10,0" />
+        <Setter Property="Padding" Value="40,10,40,10" />
+        <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource Dark-Color}" />
+        <Setter Property="xct:ShadowEffect.Radius" Value="{StaticResource Button-ShadowEffect-Radius}" />
+        <Setter Property="xct:ShadowEffect.Opacity" Value="{StaticResource Button-ShadowEffect-Opacity}" />
+        <Setter Property="xct:TouchEffect.AnimationDuration" Value="{StaticResource Animation-Speed-Default}" />
+        <Setter Property="xct:TouchEffect.AnimationEasing" Value="{x:Static Easing.CubicOut}" />
+        <Setter Property="xct:TouchEffect.PressedOpacity" Value="{StaticResource Button-TouchEffect-PressedOpacity}" />
+        <Setter Property="xct:TouchEffect.PressedScale" Value="{StaticResource Button-TouchEffect-PressedScale}" />
     </Style>
 
-    <Style TargetType="Button" x:Key="DangerButton">
+    <Style TargetType="Button" x:Key="Danger-Button">
         <Setter Property="FontAttributes" Value="Bold" />
         <Setter Property="FontFamily" Value="roboto-black" />
-        <Setter Property="HeightRequest" Value="63" />
-        <Setter Property="CornerRadius" Value="50" />
-        <Setter Property="FontSize" Value="22" />
-        <Setter Property="BackgroundColor" Value="{StaticResource DangerColor}" />
-        <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+        <Setter Property="HeightRequest" Value="{StaticResource Button-Height-Request}" />
+        <Setter Property="CornerRadius" Value="{StaticResource Button-Corner-Radius}" />
+        <Setter Property="FontSize" Value="{StaticResource Font-Size-xs}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Danger-Color}" />
+        <Setter Property="TextColor" Value="{StaticResource White-Color}" />
         <Setter Property="Margin" Value="10,20,10,0" />
+        <Setter Property="Padding" Value="40,10,40,10" />
+        <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource Dark-Color}" />
+        <Setter Property="xct:ShadowEffect.Radius" Value="{StaticResource Button-ShadowEffect-Radius}" />
+        <Setter Property="xct:ShadowEffect.Opacity" Value="{StaticResource Button-ShadowEffect-Opacity}" />
+        <Setter Property="xct:TouchEffect.AnimationDuration" Value="{StaticResource Animation-Speed-Default}" />
+        <Setter Property="xct:TouchEffect.AnimationEasing" Value="{x:Static Easing.CubicOut}" />
+        <Setter Property="xct:TouchEffect.PressedOpacity" Value="{StaticResource Button-TouchEffect-PressedOpacity}" />
+        <Setter Property="xct:TouchEffect.PressedScale" Value="{StaticResource Button-TouchEffect-PressedScale}" />
+    </Style>
+
+    <Style TargetType="Button" x:Key="Orange-Button">
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontFamily" Value="roboto-black" />
+        <Setter Property="HeightRequest" Value="{StaticResource Button-Height-Request}" />
+        <Setter Property="CornerRadius" Value="{StaticResource Button-Corner-Radius}" />
+        <Setter Property="FontSize" Value="{StaticResource Font-Size-xs}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Orange-Color}" />
+        <Setter Property="TextColor" Value="{StaticResource White-Color}" />
+        <Setter Property="Margin" Value="10,20,10,0" />
+        <Setter Property="Padding" Value="40,10,40,10" />
+        <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource Dark-Color}" />
+        <Setter Property="xct:ShadowEffect.Radius" Value="{StaticResource Button-ShadowEffect-Radius}" />
+        <Setter Property="xct:ShadowEffect.Opacity" Value="{StaticResource Button-ShadowEffect-Opacity}" />
+        <Setter Property="xct:TouchEffect.AnimationDuration" Value="{StaticResource Animation-Speed-Default}" />
+        <Setter Property="xct:TouchEffect.AnimationEasing" Value="{x:Static Easing.CubicOut}" />
+        <Setter Property="xct:TouchEffect.PressedOpacity" Value="{StaticResource Button-TouchEffect-PressedOpacity}" />
+        <Setter Property="xct:TouchEffect.PressedScale" Value="{StaticResource Button-TouchEffect-PressedScale}" />
+    </Style>
+
+    <Style TargetType="Button" x:Key="Dark-Button">
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontFamily" Value="roboto-black" />
+        <Setter Property="HeightRequest" Value="{StaticResource Button-Height-Request}" />
+        <Setter Property="CornerRadius" Value="{StaticResource Button-Corner-Radius}" />
+        <Setter Property="FontSize" Value="{StaticResource Font-Size-xs}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Dark-Color}" />
+        <Setter Property="TextColor" Value="{StaticResource White-Color}" />
+        <Setter Property="Margin" Value="10,20,10,0" />
+        <Setter Property="Padding" Value="40,10,40,10" />
+        <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource Dark-Color}" />
+        <Setter Property="xct:ShadowEffect.Radius" Value="{StaticResource Button-ShadowEffect-Radius}" />
+        <Setter Property="xct:ShadowEffect.Opacity" Value="{StaticResource Button-ShadowEffect-Opacity}" />
+        <Setter Property="xct:TouchEffect.AnimationDuration" Value="{StaticResource Animation-Speed-Default}" />
+        <Setter Property="xct:TouchEffect.AnimationEasing" Value="{x:Static Easing.CubicOut}" />
+        <Setter Property="xct:TouchEffect.PressedOpacity" Value="{StaticResource Button-TouchEffect-PressedOpacity}" />
+        <Setter Property="xct:TouchEffect.PressedScale" Value="{StaticResource Button-TouchEffect-PressedScale}" />
     </Style>
 
 </ResourceDictionary>

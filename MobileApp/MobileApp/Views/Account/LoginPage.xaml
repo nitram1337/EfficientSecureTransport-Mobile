@@ -32,9 +32,9 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
-                    <StackLayout BackgroundColor="{StaticResource WhiteColor}" VerticalOptions="FillAndExpand">
+                    <StackLayout BackgroundColor="{StaticResource White-Color}" VerticalOptions="FillAndExpand">
                         <StackLayout Orientation="Horizontal" Margin="50,40,50,0">
-                            <Label Text="Log in" Style="{StaticResource Heading-Page}" HorizontalOptions="StartAndExpand" />
+                            <Label Text="Log in" Style="{StaticResource Heading-Comfortaa}" HorizontalOptions="StartAndExpand" />
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                             <ContentView Padding="0,1,0,20" VerticalOptions="FillAndExpand">
@@ -43,33 +43,26 @@
                         </StackLayout>
                     </StackLayout>
 
-                    <StackLayout  Grid.Row="1" BackgroundColor="{StaticResource WhiteColor}" Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                    <StackLayout  Grid.Row="1" BackgroundColor="{StaticResource White-Color}" Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
                         
-                        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim tristique morbi eu est nibh egestas." Style="{StaticResource Paragraph}" TextColor="Gray" HorizontalTextAlignment="Center"></Label>
+                        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim tristique morbi eu est nibh egestas." Style="{StaticResource Paragraph-Regular}" TextColor="Gray" HorizontalTextAlignment="Center"></Label>
 
                         <Button ContentLayout="Right, 35" 
-                                Style="{StaticResource PrimaryButton}"
+                                Style="{StaticResource Primary-Button}"
                                 IsVisible="{Binding IsButtonVisible}"
                                 IsEnabled="{Binding IsButtonClickable}"
-                                xct:ShadowEffect.Color="{StaticResource DarkColor}"
-                                xct:ShadowEffect.Radius="10"
-                                xct:ShadowEffect.Opacity="1"
-                                xct:TouchEffect.AnimationDuration="190"
-                                xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicOut}"
-                                xct:TouchEffect.PressedOpacity="0"
-                                xct:TouchEffect.PressedScale="0.90"
-                                xct:TouchEffect.Command="{Binding LoginCommand}"
-                                Padding="40, 10, 40, 10" Margin="60,29,60,44" FontSize="Large" Text="Sign in" VerticalOptions="End" HorizontalOptions="CenterAndExpand">
+                                Command="{Binding LoginCommand}"
+                                Text="Sign in" VerticalOptions="End" HorizontalOptions="CenterAndExpand">
                             <Button.ImageSource>
                                 <FontImageSource FontFamily="FA-solid" Glyph="{Static fa:IconFont.SignInAlt}" Size="27" />
                             </Button.ImageSource>
                         </Button>
 
-                        <ActivityIndicator Margin="0,29,0,0"  IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="{StaticResource PrimaryColor}"/>
+                        <ActivityIndicator Margin="0,29,0,0" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="{StaticResource Primary-Color}"/>
 
                         <Label IsVisible="{Binding IsButtonVisible}"
                                IsEnabled="{Binding IsButtonClickable}"
-                               Style="{StaticResource Paragraph}" 
+                               Style="{StaticResource Paragraph-Regular}" 
                                TextColor="Gray" FontSize="16" HorizontalTextAlignment="Center" xct:TouchEffect.AnimationDuration="190"
                                            xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicOut}"
                                            xct:TouchEffect.PressedOpacity="0"
@@ -84,7 +77,7 @@
                                            xct:TouchEffect.PressedOpacity="0"
                                            xct:TouchEffect.PressedScale="0.90"
                                            xct:TouchEffect.Command="{Binding RegisterCommand}" 
-                                           Text="Sign up" TextColor="{StaticResource PrimaryColor}" />
+                                           Text="Sign up" TextColor="{StaticResource Primary-Color}" />
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>

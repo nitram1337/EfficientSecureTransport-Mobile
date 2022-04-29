@@ -18,7 +18,7 @@
                 <Label
                     FontSize="14"
                     TextColor="White"
-                    Text="Venter på internet forbindelse">
+                    Text="Waiting for network">
                 </Label>
             </StackLayout>
 

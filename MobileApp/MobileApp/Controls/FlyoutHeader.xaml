@@ -20,7 +20,8 @@
                Opacity="1.0" />
 
         <Label Text="{Binding Fullname}"
-               Style="{StaticResource Heading-Page}"
+               Style="{StaticResource Heading-Comfortaa}"
+               TextColor="{StaticResource Primary-Color}"
                HorizontalTextAlignment="Center"
                VerticalTextAlignment="Center"
                FontSize="24" />

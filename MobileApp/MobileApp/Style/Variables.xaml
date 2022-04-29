@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="MobileApp.Style.Variables">
+
+    <!--Colors-->
+    <Color x:Key="Primary-Color">#00472F</Color>
+    <Color x:Key="Light-Primary-Color">#007D53</Color>
+    <Color x:Key="Secondary-Color">#22232E</Color>
+    <Color x:Key="Danger-Color">#FF0000</Color>
+    <Color x:Key="Info-Color">#0380C5</Color>
+    <Color x:Key="Unselected-Color">#B4FFFFFF</Color>
+    <Color x:Key="Orange-Color">#FF8000</Color>
+    <Color x:Key="Gray-Color">#767676</Color>
+    <Color x:Key="Dark-Gray-Color">#3D3D3D</Color>
+    <Color x:Key="Dark-Color">#22232E</Color>
+    <Color x:Key="White-Color">#FFFFFF</Color>
+
+    <!--Animations-->
+    <x:Int16 x:Key="Animation-Speed-Default">190</x:Int16>
+    <x:Int16 x:Key="Animation-Speed-Normal">220</x:Int16>
+    <x:Int16 x:Key="Animation-Speed-Slow">300</x:Int16>
+    <x:Int16 x:Key="Animation-Speed-Fast">100</x:Int16>
+    
+    <!--Fonts-->
+    <x:Int16 x:Key="Font-Size-xxxs">15</x:Int16>
+    <x:Int16 x:Key="Font-Size-xxs">18</x:Int16>
+    <x:Int16 x:Key="Font-Size-xs">21</x:Int16>
+    <x:Int16 x:Key="Font-Size-s">24</x:Int16>
+    <x:Int16 x:Key="Font-Size-m">27</x:Int16>
+    <x:Int16 x:Key="Font-Size-l">29</x:Int16>
+    <x:Int16 x:Key="Font-Size-xl">32</x:Int16>
+    <x:Int16 x:Key="Font-Size-xxl">35</x:Int16>
+    <x:Int16 x:Key="Font-Size-xxxl">38</x:Int16>
+
+    <x:Int16 x:Key="Font-Size-Huge">50</x:Int16>
+
+</ResourceDictionary>

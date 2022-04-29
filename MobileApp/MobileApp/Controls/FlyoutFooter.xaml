@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:fa="clr-namespace:FontAwesome"
              xmlns:style="clr-namespace:MobileApp.Style"
              xmlns:viewmodels="clr-namespace:MobileApp.ViewModels.FlyoutMenu"
@@ -11,7 +10,7 @@
     <ContentView.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <style:Colors />
+                <style:Variables />
                 <style:Buttons />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
@@ -20,23 +19,16 @@
     <StackLayout>
         
         <Button ContentLayout="Right, 35" 
-                Style="{StaticResource DangerButton}"
+                Style="{StaticResource Danger-Button}"
                 IsVisible="{Binding IsButtonVisible}"
-                xct:ShadowEffect.Color="{StaticResource DarkColor}"
-                xct:ShadowEffect.Radius="10"
-                xct:ShadowEffect.Opacity="1"
-                xct:TouchEffect.AnimationDuration="190"
-                xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicOut}"
-                xct:TouchEffect.PressedOpacity="0"
-                xct:TouchEffect.PressedScale="0.90"
-                xct:TouchEffect.Command="{Binding LogoutCommand}"
-                Padding="40, 10, 40, 10" Margin="60,29,60,44" FontSize="Large" Text="Sign out" VerticalOptions="End" HorizontalOptions="CenterAndExpand">
+                Command="{Binding LogoutCommand}"
+                Margin="60,29,60,44" Text="Sign out" VerticalOptions="End" HorizontalOptions="CenterAndExpand">
             <Button.ImageSource>
                 <FontImageSource FontFamily="FA-solid" Glyph="{Static fa:IconFont.SignOutAlt}" Size="27" />
             </Button.ImageSource>
         </Button>
 
-        <ActivityIndicator Margin="60,29,60,44"  IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="{StaticResource DangerColor}"/>
+        <ActivityIndicator Margin="60,29,60,44"  IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="{StaticResource Danger-Color}"/>
 
     </StackLayout>
     

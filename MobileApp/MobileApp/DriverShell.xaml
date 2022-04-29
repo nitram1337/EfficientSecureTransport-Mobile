@@ -26,21 +26,21 @@
 
     <FlyoutItem Title="Current route">
         <FlyoutItem.Icon>
-            <FontImageSource FontFamily="FA-solid" Glyph="{Static fa:IconFont.Route}" Size="Large" Color="{StaticResource PrimaryColor}" />
+            <FontImageSource FontFamily="FA-solid" Glyph="{Static fa:IconFont.Route}" Size="Large" Color="{StaticResource Primary-Color}" />
         </FlyoutItem.Icon>
         <ShellContent Route="CurrentRoutePage" ContentTemplate="{DataTemplate route:CurrentRoutePage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="All routes">
         <FlyoutItem.Icon>
-            <FontImageSource FontFamily="FA-solid" Glyph="{Static fa:IconFont.ClipboardList}" Size="Large" Color="{StaticResource PrimaryColor}" />
+            <FontImageSource FontFamily="FA-solid" Glyph="{Static fa:IconFont.ClipboardList}" Size="Large" Color="{StaticResource Primary-Color}" />
         </FlyoutItem.Icon>
         <ShellContent Route="ListRoutesPage" ContentTemplate="{DataTemplate route:ListRoutesPage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="My profile">
         <FlyoutItem.Icon>
-            <FontImageSource FontFamily="FA-solid" Glyph="{Static fa:IconFont.LaughBeam}" Size="Large" Color="{StaticResource PrimaryColor}" />
+            <FontImageSource FontFamily="FA-solid" Glyph="{Static fa:IconFont.LaughBeam}" Size="Large" Color="{StaticResource Primary-Color}" />
         </FlyoutItem.Icon>
         <ShellContent Route="ProfilePage" ContentTemplate="{DataTemplate account:ProfilePage}" />
     </FlyoutItem>
