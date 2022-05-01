@@ -6,9 +6,9 @@
        xmlns:account="clr-namespace:MobileApp.Views.Account"
        xmlns:route="clr-namespace:MobileApp.Views.Route"
        xmlns:controls="clr-namespace:MobileApp.Controls"
-       x:Class="MobileApp.DriverShell">
+       x:Class="MobileApp.AdminShell">
 
-    <!--### CUSTOMER SHELL ###-->
+    <!--### ADMIN SHELL ###-->
 
     <Shell.FlyoutHeader>
         <controls:FlyoutHeader />
@@ -41,6 +41,13 @@
             <FontImageSource FontFamily="FA-solid" Glyph="{Static fa:IconFont.LaughBeam}" Size="Large" Color="{StaticResource Primary-Color}" />
         </FlyoutItem.Icon>
         <ShellContent Route="ProfilePage" ContentTemplate="{DataTemplate account:ProfilePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Admin panel">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="FA-solid" Glyph="{Static fa:IconFont.UserShield}" Size="Large" Color="{StaticResource Primary-Color}" />
+        </FlyoutItem.Icon>
+        <ShellContent Route="AdminPage" ContentTemplate="{DataTemplate account:ProfilePage}" />
     </FlyoutItem>
 
     <TabBar>

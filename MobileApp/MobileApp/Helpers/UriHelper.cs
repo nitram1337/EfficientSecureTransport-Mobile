@@ -1,4 +1,7 @@
-﻿using System.Linq;
+﻿// This code was taken from Microsoft project eShop On Containers.
+// https://github.com/dotnet-architecture/eshop-mobile-client/blob/main/eShopOnContainers/eShopOnContainers.Core/Helpers/UriHelper.cs
+
+using System.Linq;
 
 namespace MobileApp.Helpers
 {

@@ -45,7 +45,7 @@
 
                     <StackLayout  Grid.Row="1" BackgroundColor="{StaticResource White-Color}" Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
                         
-                        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim tristique morbi eu est nibh egestas." Style="{StaticResource Paragraph-Regular}" TextColor="Gray" HorizontalTextAlignment="Center"></Label>
+                        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim tristique morbi eu est nibh egestas." Style="{StaticResource Paragraph-Regular}" HorizontalTextAlignment="Center"></Label>
 
                         <Button ContentLayout="Right, 35" 
                                 Style="{StaticResource Primary-Button}"
@@ -62,22 +62,22 @@
 
                         <Label IsVisible="{Binding IsButtonVisible}"
                                IsEnabled="{Binding IsButtonClickable}"
-                               Style="{StaticResource Paragraph-Regular}" 
-                               TextColor="Gray" FontSize="16" HorizontalTextAlignment="Center" xct:TouchEffect.AnimationDuration="190"
-                                           xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicOut}"
-                                           xct:TouchEffect.PressedOpacity="0"
-                                           xct:TouchEffect.PressedScale="0.90"
-                                           xct:TouchEffect.Command="{Binding RegisterCommand}" >
+                               Style="{StaticResource Paragraph-Regular}"
+                               xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicOut}"
+                               xct:TouchEffect.PressedOpacity="0"
+                               xct:TouchEffect.PressedScale="0.90"
+                               xct:TouchEffect.Command="{Binding RegisterCommand}" 
+                               Margin="0,40,0,0" HorizontalTextAlignment="Center" xct:TouchEffect.AnimationDuration="190" >
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="Har du ikke en konto?" />
+                                    <Span Text="You don't have an account?" />
                                     <Span Text=" " />
                                     <Span  xct:TouchEffect.AnimationDuration="190"
                                            xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicOut}"
                                            xct:TouchEffect.PressedOpacity="0"
                                            xct:TouchEffect.PressedScale="0.90"
                                            xct:TouchEffect.Command="{Binding RegisterCommand}" 
-                                           Text="Sign up" TextColor="{StaticResource Primary-Color}" />
+                                           Text="Sign up" FontFamily="roboto-bold" FontSize="18" TextColor="{StaticResource Primary-Color}" />
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>

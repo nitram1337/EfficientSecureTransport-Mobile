@@ -39,9 +39,9 @@ namespace MobileApp.Services.Identity
 
                 return new IdentityResult { Aborted = true };
             }
-            catch (Exception ex)
+            catch
             {
-                return new IdentityResult { ErrorDescription = ex.Message };
+                return new IdentityResult { ErrorDescription = "Server kan ikke nåes i øjeblikket.Prøv igen senere." };
             }
 
             //catch (HttpRequestExceptionEx ex) when (ex.HttpCode == System.Net.HttpStatusCode.InternalServerError)

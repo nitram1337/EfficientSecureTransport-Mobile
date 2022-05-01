@@ -9,8 +9,7 @@
              xmlns:viewmodels="clr-namespace:MobileApp.ViewModels.Route"
              x:Class="MobileApp.Views.Route.CurrentRoutePage"
              x:DataType="viewmodels:CurrentRouteViewModel"
-             Title="Current route"
-             BackgroundColor="#FFFFFF">
+             Title="Current route">
 
     <ContentPage.Resources>
         <ResourceDictionary>

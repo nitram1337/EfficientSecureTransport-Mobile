@@ -73,7 +73,7 @@ namespace MobileApp.ViewModels.Account
                     switch (_credentialsService.IsAdmin)
                     {
                         case true:
-                            Application.Current.MainPage = new DriverShell();
+                            Application.Current.MainPage = new AdminShell();
                             break;
 
                         case false:
