@@ -25,9 +25,9 @@ namespace MobileApp.Services.Route
 
         public async Task<bool> UpdateDriverLocationByCoordinates(RouteCoordinate data)
         {
-            var uri = UriHelper.CombineUri(GlobalSettings.Instance.RouteApiEndpoint, "/update/driverlocation");
+            var uri = UriHelper.CombineUri(GlobalSettings.Instance.RouteApiEndpoint, "/addlocationforroute");
 
-            return await _requestProviderService.PostAsync<RouteCoordinate, bool>(uri, data);
+            return await _requestProviderService.PostLocationAsync<RouteCoordinate>(uri, data);
         }
     }
 }

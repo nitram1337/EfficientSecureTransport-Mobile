@@ -23,7 +23,7 @@ namespace MobileApp.MethodExtensions
             credentialsService.ExternalProvider = loginResult.User.Claims.FirstOrDefault(c => c.Type == "external_provider")?.Value;
             credentialsService.IsExternal = !string.IsNullOrEmpty(credentialsService.ExternalProvider) ? true : false;
 
-            return new IdentityResult();
+            return new IdentityResult { Succeeded = true };
         }
 
         public static IdentityResult SetProfileCredentials(this UserInfoResult userInfoResult, ICredentialsService credentialsService)
@@ -36,7 +36,7 @@ namespace MobileApp.MethodExtensions
             credentialsService.IsAdmin = credentialsService.Role.Contains("Administrator") ? true : false;
             credentialsService.EmailConfirmed = Convert.ToBoolean(userInfoResult.Claims.FirstOrDefault(c => c.Type == "email_verified")?.Value);
 
-            return new IdentityResult();
+            return new IdentityResult { Succeeded = true };
         }
     }
 }

@@ -56,10 +56,15 @@ namespace MobileApp.ViewModels.Route
             try
             {
                 var currentPosition = await Geolocation.GetLocationAsync(new GeolocationRequest(GeolocationAccuracy.Best, TimeSpan.FromSeconds(5000)));
-                RouteCoordinate.Coordinate.Latitude = currentPosition.Latitude;
-                RouteCoordinate.Coordinate.Longitude = currentPosition.Longitude;
+                RouteCoordinate.Latitude = currentPosition.Latitude;
+                RouteCoordinate.Longitude = currentPosition.Longitude;
 
-                await _routeService.UpdateDriverLocationByCoordinates(RouteCoordinate);
+                bool resultSuccess = await _routeService.UpdateDriverLocationByCoordinates(RouteCoordinate);
+
+                if (resultSuccess)
+                {
+
+                }
             }
             finally
             {
@@ -75,8 +80,7 @@ namespace MobileApp.ViewModels.Route
             {
                 RouteCoordinate = new RouteCoordinate
                 {
-                    RouteId = 3,
-                    Coordinate = new Coordinate()
+                    RouteId = 3
                 };
             }
             finally

@@ -63,7 +63,7 @@ namespace MobileApp.Services.Identity
                 _credentialsService.ClearProfileCredentials();
                 RemoveSecureStorageValues();
 
-                return new IdentityResult();
+                return new IdentityResult { Succeeded = true };
             }
             catch
             {
@@ -87,7 +87,7 @@ namespace MobileApp.Services.Identity
                     refreshTokenResult.IdentityToken,
                     refreshTokenResult.RefreshToken);
 
-                return new IdentityResult();
+                return new IdentityResult{ Succeeded = true };
             }
             catch
             {
@@ -108,7 +108,6 @@ namespace MobileApp.Services.Identity
                 if (userInfoResult.Claims != null)
                 {
                     return userInfoResult.SetProfileCredentials(_credentialsService);
-
                 }
 
                 return new IdentityResult { ErrorDescription = "Kunne ikke får brugens oplysninger." };

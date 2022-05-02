@@ -75,7 +75,7 @@
 
         private void UpdateApiGatewayEndpoint(string baseUri)
         {
-            RouteApiEndpoint = $"{baseUri}/api/route";
+            RouteApiEndpoint = $"{baseUri}/api/Routes";
         }
 
         private void UpdateIdentityEndpoint(string baseUri)

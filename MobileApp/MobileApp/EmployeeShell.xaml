@@ -6,9 +6,9 @@
        xmlns:account="clr-namespace:MobileApp.Views.Account"
        xmlns:route="clr-namespace:MobileApp.Views.Route"
        xmlns:controls="clr-namespace:MobileApp.Controls"
-       x:Class="MobileApp.DriverShell">
+       x:Class="MobileApp.EmployeeShell">
 
-    <!--### CUSTOMER SHELL ###-->
+    <!--### EMPLOYEE SHELL ###-->
 
     <Shell.FlyoutHeader>
         <controls:FlyoutHeader />

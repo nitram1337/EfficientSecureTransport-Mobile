@@ -32,6 +32,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="EmployeeShell.xaml.cs">
+      <DependentUpon>EmployeeShell.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Style\Variables.xaml.cs">
       <DependentUpon>Variables.xaml</DependentUpon>
     </Compile>
@@ -50,7 +53,7 @@
     <EmbeddedResource Update="Controls\OfflineIndicator.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="DriverShell.xaml">
+    <EmbeddedResource Update="EmployeeShell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Style\Buttons.xaml">

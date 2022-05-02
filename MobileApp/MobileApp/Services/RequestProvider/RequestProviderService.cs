@@ -111,6 +111,25 @@ namespace MobileApp.Services.RequestProvider
             return result;
         }
 
+        public async Task<bool> PostLocationAsync<TInput>(string uri, TInput data, string header = "")
+        {
+            await HandleRefreshToken();
+            ConfigureHttpClient(_credentialsService.AccessToken);
+
+
+            if (!string.IsNullOrEmpty(header))
+            {
+                AddHeaderParameter(_httpClient, header);
+            }
+
+            var content = new StringContent(JsonConvert.SerializeObject(data));
+            content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+            HttpResponseMessage response = await _httpClient.PostAsync(uri, content);
+
+            await HandleResponse(response);
+
+            return true;
+        }
         #endregion POST
 
         #region PUT

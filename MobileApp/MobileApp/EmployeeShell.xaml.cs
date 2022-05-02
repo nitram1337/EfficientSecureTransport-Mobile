@@ -3,9 +3,9 @@ using MobileApp.Views.Route;
 
 namespace MobileApp
 {
-    public partial class DriverShell : Xamarin.Forms.Shell
+    public partial class EmployeeShell : Xamarin.Forms.Shell
     {
-        public DriverShell()
+        public EmployeeShell()
         {
             InitializeComponent();
             RegisterRoutes();
