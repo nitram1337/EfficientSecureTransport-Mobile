@@ -144,6 +144,9 @@ Vælg det ønskede *Android SDK Platform* og tilhørende *Intel x86 Atom System 
 
 ![Choose Android SDK Platform](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Setup%20af%20Enviroment/Android_SDK_choosing_android.png)
 
+<br />
+
+
 Åben **Android Device Manager**<br />
 `Visual Studio IDE | Continue without code | Tools | Android | Android Device Manager`
 
@@ -151,6 +154,9 @@ Prøv at starte emulatoren ved at klikke på *Start* knap.<br />
 Hvis der er ingen mobil enhed, så kan du tilføj en ved at klikke på *New*.
 
 ![Open Android Device Manager](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Setup%20af%20Enviroment/Android_Device_Manager_starting_emulator.png)
+
+<br />
+
 
 På *New device* fane, `EST-Mobile` har brugt følgende enhed indstillinger:
 
@@ -189,6 +195,9 @@ Kører [Efficient Secure Transport](https://github.com/nitram1337/EfficientSecur
  >**Note:** Du kan evt. bruge [Web Compiler](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebCompiler) extension for hurtigt at køre scriptet ved at højreklikke.
  `EST-Mobile | Adb solution folder | hørjeklik på runAdb.ps1 | Execute file`
   >**Note:** Du skal IKKE lukke powershell fanen, eller så `EST-Mobile` kan ikke nå microservicer.
+
+<br />
+
 
 ### 4. Kører EST-Mobile
 `EST-Mobile` må godt køres nu ved at trykke *start*.
