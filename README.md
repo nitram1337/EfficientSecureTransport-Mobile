@@ -105,7 +105,7 @@ Vi anbefaler at du bruger den nyeste [Visual studio IDE](https://visualstudio.mi
 
 
 ### 1. Sørg for, at Xamarin add-ons er installeret
-`Windows Start | Visual Studio Installer | Modify | sæt flueben ved Mobile development with .NET | Install while downloading`
+`Windows Start | Visual Studio Installer | Modify | flueben skal være ved Mobile development with .NET | Install while downloading`
 
 <br />
 
