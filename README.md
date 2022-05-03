@@ -217,18 +217,32 @@ Kører [Efficient Secure Transport](https://github.com/nitram1337/EfficientSecur
     <img src="https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Screens/EST_MobileApp_All_Routes_Page.png" height="380" />
     <img src="https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Screens/EST_MobileApp_My_Profile_Page.png" height="380" />
 </div>
+Mock-ups blev lavet med [figma](https://www.figma.com/). Et open-source værktøj til at designe logoer, WebUI og MobileUI.
+
 
 <br />
 
 
 # In depth look
 En kort [flowchart her](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/EST_Mobileapp_Flowchart.png), som den viser hvordan en virksomhedens lastbilchauffør opdater sin nuværende lokation, imens er igang med en rute.
+Flowchart blev lavet med [draw.io](draw.io).
 <br />
 
-Her under vises et sequence diagram for at forstå hvordan kommunikationen imellem `EST-Mobile` og **Api.Gateway** fra [Efficient Secure Transport](https://github.com/nitram1337/EfficientSecureTransport)
+Her under vises et sekvens diagram for at forstå hvordan kommunikationen imellem `EST-Mobile` og **Api.Gateway** fra [Efficient Secure Transport](https://github.com/nitram1337/EfficientSecureTransport)
 
 ![Communication between EST-MobileApp and Api.Gateway ](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/EST_Mobileapp_Sequence_Diagram_ApiGateway.png)
+Sekvens diagramet blev lavet med [sequencediagram.org](https://sequencediagram.org/).
 <br />
 
 `EST-Mobile` bruge [MVVM (Model-View-ViewModel-Model) pattern](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/enterprise-application-patterns/mvvm) for afkobling business logic og presentation logic.
 
+<br />
+
+
+# Licenses
+`EST-Mobile` bruger nogle third-party assets:
+- [Xamarin.Plugins](https://github.com/jamesmontemagno/Xamarin.Plugins) lavet af James Montemagno.
+- [XamarinCommunityToolkit](https://github.com/xamarin/XamarinCommunityToolkit) lavet af Xamarin Dev Team.
+- [IdentityModel.OidcClient](https://github.com/IdentityModel/IdentityModel.OidcClient) lavet af Duende Software.
+- [Fontawesome ikoner](https://fontawesome.com/v6/search) lavet af Fontawesome Team.
+- Nogle tekst font hentet fra [Google Fonts](https://fonts.google.com/).
