@@ -188,3 +188,34 @@ Kører [Efficient Secure Transport](https://github.com/nitram1337/EfficientSecur
 `EST-Mobile` har en powershell script som vil køre adb kommandoer automatisk for dig. Scriptet  *runAdb.ps1* findes ind i `EST-Mobile` solution ind i mappen *Adb*.
  >**Note:** Du kan evt. bruge [Web Compiler](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebCompiler) extension for hurtigt at køre scriptet ved at højreklikke.
  `EST-Mobile | Adb solution folder | hørjeklik på runAdb.ps1 | Execute file`
+  >**Note:** Du skal IKKE lukke powershell fanen, eller så `EST-Mobile` kan ikke nå microservicer.
+
+### 4. Kører EST-Mobile
+`EST-Mobile` må godt køres nu ved at trykke *start*.
+
+<br />
+
+
+# Mock-ups
+>**Note:** Nogle af siderne er ikke helt færdige, men i fremtiden er det sådan, appen skal ses.
+<div style="display: flex;">
+    <img src="https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Screens/EST_MobileApp_Splash_Screen.png" height="380" />
+    <img src="https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Screens/EST_MobileApp_Login_Page.png" height="380" />
+    <img src="https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Screens/EST_MobileApp_Flyout_Menu.png" height="380" />
+    <img src="https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Screens/EST_MobileApp_Current_Route_Page.png" height="380" />
+    <img src="https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Screens/EST_MobileApp_All_Routes_Page.png" height="380" />
+    <img src="https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Screens/EST_MobileApp_My_Profile_Page.png" height="380" />
+    <img src="https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Screens/EST_MobileApp_All_Routes_Page.png" height="380" />
+    <img src="https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Screens/EST_MobileApp_My_Profile_Page.png" height="380" />
+</div>
+
+<br />
+
+
+# In depth look
+En kort [flowchart her](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/EST_Mobileapp_Flowchart.png), som den viser hvordan en virksomhedens lastbilchauffør opdater sin nuværende lokation, imens er igang med en rute.
+<br />
+
+Her under vises et sequence diagram for at forstå hvordan kommunikationen imellem `EST-Mobile` og **Api.Gateway** fra [Efficient Secure Transport](https://github.com/nitram1337/EfficientSecureTransport)
+
+![](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/EST_Mobileapp_Sequence_Diagram_ApiGateway.png)
