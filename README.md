@@ -227,4 +227,8 @@ En kort [flowchart her](https://github.com/nitram1337/EfficientSecureTransport-M
 
 Her under vises et sequence diagram for at forstå hvordan kommunikationen imellem `EST-Mobile` og **Api.Gateway** fra [Efficient Secure Transport](https://github.com/nitram1337/EfficientSecureTransport)
 
-![](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/EST_Mobileapp_Sequence_Diagram_ApiGateway.png)
+![Communication between EST-MobileApp and Api.Gateway ](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/EST_Mobileapp_Sequence_Diagram_ApiGateway.png)
+<br />
+
+`EST-Mobile` bruge [MVVM (Model-View-ViewModel-Model) pattern](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/enterprise-application-patterns/mvvm) for afkobling business logic og presentation logic.
+
