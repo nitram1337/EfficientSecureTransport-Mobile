@@ -103,3 +103,4 @@ På *New device* fane, `EST-Mobile` har brugt følgende indstillinger:
 
 ![Creating an Android Device Emulator](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Setup%20af%20Enviroment/Android_Device_Manager_creating_emulator.png)
 
+
