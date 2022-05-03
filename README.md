@@ -5,6 +5,9 @@
 
 Med `EST-Mobile`, virksomhedens lastbilchauffører kan være i stand til at autentificer og foretag deres arbejde ved at se deres nuværende ruter, se en liste over alle ruter, samt opdatere deres placeringer på ruten.
 
+<br />
+
+
 # System Diagram
 
 `EST-Mobile` er afghængig af [Efficient Secure Transport](https://github.com/nitram1337/EfficientSecureTransport) repository, så inden du kører `EST-Mobile`, sørg for at du henter og kører dette repository,
@@ -13,6 +16,9 @@ samt følg vejledningen til opsætningen som er længere ned ved sektionen: **Se
 Her under vises et technical diagram for at forstå hvordan hele systemet er bygget på, og hvordan det fungerer fuldt ud.
 
 ![Technical diagram](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/EST_Mobileapp_Technical_Diagram.png)
+
+<br />
+
 
 # Architecture
 
@@ -28,40 +34,94 @@ Hele arkitekturen består af fire dele:
   - En android platform render: - **MobileApp.Android**
   - En iOS platform render:     - **MobileApp.iOS**
 
-Her under vises et applikation arkitektur diagram for at se mere kokrete.
+Her under vises et **applikation arkitektur diagram** for at se mere konkrete.
 
 ![Application architecture diagram](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/EST_Mobileapp_Application_Architecture.png)
 
-# Setup af enviroment
-
-Vi anbefaler at du bruger den nyeste visual studio [Visual studio IDE](https://visualstudio.microsoft.com/vs/) og vi anbefaler også at du opgradere til nyeste NuGet pakker.
-<br />
-
-`Visual Studio | Tools | Update`
-
-### 1. Benyt den nyeste opdatering af Visual Studio:
-  > **Note:** Spring over step 1 hvis du har lige installeret den nyeste version af Visual Studio
-<br />
-
-`Windows Start | Visual Studio Installer | NuGet Package Manager | Package Manager Console | Update-Package`
+For flere detaljer, henvises til [Xamarin.Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms) artiklen.
 
 <br />
 
-### 2. Tilføj workload
+
+# Nugets & .NET version
+Under ses dokumentation for de nugets der er brugt med version, samt hvilken .NET version.
+
+## MobileApp
+
+.NET Standard 2.0
+
+```xml
+    <PackageReference Include="IdentityModel.OidcClient" Version="3.1.2" />
+    <PackageReference Include="MonkeyCache.FileStore" Version="1.6.3" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2401" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.2" />
+```
+
+## MobileApp.Android
+
+```xml
+    <PackageReference Include="MonkeyCache.FileStore">
+          <Version>1.6.3</Version>
+        </PackageReference>
+        <PackageReference Include="Plugin.CurrentActivity">
+          <Version>2.1.0.4</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.CommunityToolkit">
+          <Version>2.0.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2401" />
+        <PackageReference Include="Xamarin.Essentials" Version="1.7.2" />
+```
+
+## MobileApp.iOS
+
+```xml
+     <PackageReference Include="MonkeyCache.FileStore">
+          <Version>1.6.3</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.CommunityToolkit">
+          <Version>2.0.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2401" />
+        <PackageReference Include="Xamarin.Essentials" Version="1.7.2" />
+```
+
 <br />
 
-`Windows Start | Visual Studio Installer | Modify | sæt flueben ved Mobile development with .NET`
 
-### 3. Aktivere Virtualisering
+# Requirements
+- [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) for at kompilere.
+- [Xamarin add-ons](https://docs.microsoft.com/en-us/xamarin/get-started/installation/?pivots=windows) til Visual Studio (Se *punkt 1* fra **Setup** sektion)
+- [Android SDK Tools](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-sdk?tabs=windows) (Se *punkt 3* fra *Setup* sektion)
+
 <br />
 
 
-Virtualisering kan forbedre performance når man kører **adb**, derfor vi skal aktiver **Hyper-V** og **Windows Hypervisor Platform**
-Man skal lige kontroller om *Hyper-V* er enabled i BIOS, og det gøre man ved at skrive *systeminfo* ind i **CMD**.
+# Setup
+
+Vi anbefaler at du bruger den nyeste [Visual studio IDE](https://visualstudio.microsoft.com/vs/)
+<br />
+
+
+### 1. Sørg for, at Xamarin add-ons er installeret
+`Windows Start | Visual Studio Installer | Modify | sæt flueben ved Mobile development with .NET | Install while downloading`
+
+<br />
+
+
+### 2. Forbedre Android emulator performance med virtualisering
+Virtualisering kan forbedre performance på **Android Emulator**, du kan bruge en af de følgende virtualisering teknologier: 
+- **Hyper-V**
+- Intel HAXM
+
+Længere ned du kan finde en kort forklaring til hvordan man kan kontroller, om din PC understøtter Hyper-V og hvordan du aktiver det. <br />
+Hvis du vil gerne vide mere, du kan læse [Hardware Acceleration for emulator performance (Hyper-V & HAXM)](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?pivots=windows) artiklen.
+
+- Kontroller om, din PC hardware og software er kompatibel med *Hyper-V*  
+`Windows Start | CMD | systeminfo`
 Der skal stå *Yes* ud for alle fire Hyper-V Requirements eller: *A hypervisor has been detected. Features required for Hyper-V will not be displayed.*
-
-Der skal tjekkes om *Hyper-V* og *Windows Hypervisor Platform* er aktiveret.
-
+- Kontroller om, *Hyper-V* og *Windows Hypervisor Platform* er aktiveret.
 `Windows Start | Turn Windows features on or off | sæt flueben ved Hyper-V og Windows Hypervisor Platform`
 
 > **Note:** En genstart for at fuldføre aktivering, er påkrævet!
@@ -69,28 +129,30 @@ Der skal tjekkes om *Hyper-V* og *Windows Hypervisor Platform* er aktiveret.
 
 ![Enabling Hyper-V and Windows Hypervisor Platform](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Setup%20af%20Enviroment/Hyper-V_config.png)
 
-### 5. Tilføj SDK og en mobil emulator
 <br />
 
-`Visual Studio IDE | Tools | Android | Android SDK Manager |`
+
+### 3. Tilføj SDK og en mobil emulator
+Åben **Android SDK Manager**<br />
+`Visual Studio IDE | Continue without code | Tools | Android | Android SDK Manager`
 
 > **Note:** Anbefaler ikke den helt nyeste Android version, for at undgå uforenelighed eller andre problemer.  <br />
 > Den Android version, som `EST-Mobile` har brugt det er **Android 11.0 - R** <br />
-> Hvis din PC har mere end 16 gb RAM, vi anbefaler også at du giver mere RAM til din emulator, ved at angive størelsen i MB ved **hw.ramSize** (se evt. billede lidt længere ned)
+> Hvis din PC har mere end 16 gb RAM, vi anbefaler også at du giver mere RAM til din emulator, ved at angive størelsen i MB ved **hw.ramSize** (se evt. billede lidt længere ned, hvor man tilføjer ny emulator enhed).
 
-Vælg det ønskede *Android SDK Platform* og tilhørende *Intel x86 Atom System Image*.
+Vælg det ønskede *Android SDK Platform* og tilhørende *Intel x86 Atom System Image* - *Apply Changes* og foretag de nødvendige opdateringer.
 
 ![Choose Android SDK Platform](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Setup%20af%20Enviroment/Android_SDK_choosing_android.png)
 
-Foretag de nødvendige opdateringer.
+Åben **Android Device Manager**<br />
+`Visual Studio IDE | Continue without code | Tools | Android | Android Device Manager`
 
-`Visual Studio IDE | Tools | Android | Android Device Manager |`
-
-Prøv at starte emulatoren ved at klikke på *Start* knap. Hvis der er ingen mobil enhed, så kan du tilføj en ved at klikke på *New* knap.
+Prøv at starte emulatoren ved at klikke på *Start* knap.<br /> 
+Hvis der er ingen mobil enhed, så kan du tilføj en ved at klikke på *New*.
 
 ![Open Android Device Manager](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Setup%20af%20Enviroment/Android_Device_Manager_starting_emulator.png)
 
-På *New device* fane, `EST-Mobile` har brugt følgende indstillinger:
+På *New device* fane, `EST-Mobile` har brugt følgende enhed indstillinger:
 
 |        Property        |      Values             |
 |----------------|-------------------------------|
@@ -103,4 +165,5 @@ På *New device* fane, `EST-Mobile` har brugt følgende indstillinger:
 
 ![Creating an Android Device Emulator](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Setup%20af%20Enviroment/Android_Device_Manager_creating_emulator.png)
 
+# 
 
