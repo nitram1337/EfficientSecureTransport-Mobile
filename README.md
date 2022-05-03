@@ -1,4 +1,4 @@
-# EST-Mobile (EfficientSecureTransport-Mobile)
+# EST-Mobile (EfficientSecureTransport-Mobile) <img align="right" width="50" height="50" src="https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Screens/EST_MobileApp_Logo.png" />
 
 `EST-Mobile` er en mobilapplikation, som den er klar til at betjene den mobile arbejdsstyrke for den mest fiktiv virksomhed i Danmark.
 **Nødhjælpsorganisation Danmark** er virksomheden, som står altid til at levere nødjælp i rigtig kort tid til verdens brændpunkter.
@@ -11,7 +11,7 @@ Med `EST-Mobile`, virksomhedens lastbilchauffører kan være i stand til at aute
 # System Diagram
 
 `EST-Mobile` er afghængig af [Efficient Secure Transport](https://github.com/nitram1337/EfficientSecureTransport) repository, så inden du kører `EST-Mobile`, sørg for at du henter og kører dette repository,
-samt følg vejledningen til opsætningen som er længere ned ved sektionen: **Setup af enviroment**.
+samt følg `EST-Mobile` vejledningen til opsætningen som er længere ned ved sektionen: **Setup af enviroment**.
 
 Her under vises et technical diagram for at forstå hvordan hele systemet er bygget på, og hvordan det fungerer fuldt ud.
 
@@ -98,7 +98,7 @@ Under ses dokumentation for de nugets der er brugt med version, samt hvilken .NE
 <br />
 
 
-# Setup
+# Setup af enviroment
 
 Vi anbefaler at du bruger den nyeste [Visual studio IDE](https://visualstudio.microsoft.com/vs/)
 <br />
@@ -165,5 +165,26 @@ På *New device* fane, `EST-Mobile` har brugt følgende enhed indstillinger:
 
 ![Creating an Android Device Emulator](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Setup%20af%20Enviroment/Android_Device_Manager_creating_emulator.png)
 
-# 
+# Run
 
+### Start emulatoren
+`Visual Studio IDE | Continue without code | Tools | Android | Android Device Manager | Start den enhed som du har lavet lige før`
+
+<br />
+
+
+### 1. Kører den afhængig repository
+Kører [Efficient Secure Transport](https://github.com/nitram1337/EfficientSecureTransport) som *Multiple-startup* med de følgende microservices i rækkefølgen:
+- **EST.API.IdentityMS**
+- **EST.API.Gateway**
+- **EST.API.StorageMS**
+- **EST.API.RouteMS**
+- **EST.API.HotspotMS**
+
+<br />
+
+
+### 2. Kører runAdb.ps1
+`EST-Mobile` har en powershell script som vil køre adb kommandoer automatisk for dig. Scriptet  *runAdb.ps1* findes ind i `EST-Mobile` solution ind i mappen *Adb*.
+ >**Note:** Du kan evt. bruge [Web Compiler](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebCompiler) extension for hurtigt at køre scriptet ved at højreklikke.
+ `EST-Mobile | Adb solution folder | hørjeklik på runAdb.ps1 | Execute file`
