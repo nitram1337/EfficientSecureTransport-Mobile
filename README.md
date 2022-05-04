@@ -44,7 +44,7 @@ For flere detaljer, henvises til [Xamarin.Forms](https://docs.microsoft.com/en-u
 
 
 # Requirements
-- [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) for at kompilere.
+- [Visual Studio IDE](https://visualstudio.microsoft.com/vs/) (Anbefale 2019 eller 2022) for at kompilere.
 - [Xamarin add-ons](https://docs.microsoft.com/en-us/xamarin/get-started/installation/?pivots=windows) til Visual Studio (Se *punkt 1* fra **Setup** sektion)
 - [Android SDK Tools](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-sdk?tabs=windows) (Se *punkt 3* fra *Setup* sektion)
 
