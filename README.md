@@ -43,53 +43,6 @@ For flere detaljer, henvises til [Xamarin.Forms](https://docs.microsoft.com/en-u
 <br />
 
 
-# Nugets & .NET version
-Under ses dokumentation for de nugets der er brugt med version, samt hvilken .NET version.
-
-## MobileApp
-
-.NET Standard 2.0
-
-```xml
-    <PackageReference Include="IdentityModel.OidcClient" Version="3.1.2" />
-    <PackageReference Include="MonkeyCache.FileStore" Version="1.6.3" />
-    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.1" />
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2401" />  
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.2" />
-```
-
-## MobileApp.Android
-
-```xml
-    <PackageReference Include="MonkeyCache.FileStore">
-          <Version>1.6.3</Version>
-        </PackageReference>
-        <PackageReference Include="Plugin.CurrentActivity">
-          <Version>2.1.0.4</Version>
-        </PackageReference>
-        <PackageReference Include="Xamarin.CommunityToolkit">
-          <Version>2.0.1</Version>
-        </PackageReference>
-        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2401" />
-        <PackageReference Include="Xamarin.Essentials" Version="1.7.2" />
-```
-
-## MobileApp.iOS
-
-```xml
-     <PackageReference Include="MonkeyCache.FileStore">
-          <Version>1.6.3</Version>
-        </PackageReference>
-        <PackageReference Include="Xamarin.CommunityToolkit">
-          <Version>2.0.1</Version>
-        </PackageReference>
-        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2401" />
-        <PackageReference Include="Xamarin.Essentials" Version="1.7.2" />
-```
-
-<br />
-
-
 # Requirements
 - [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) for at kompilere.
 - [Xamarin add-ons](https://docs.microsoft.com/en-us/xamarin/get-started/installation/?pivots=windows) til Visual Studio (Se *punkt 1* fra **Setup** sektion)
@@ -201,6 +154,53 @@ Kører [Efficient Secure Transport](https://github.com/nitram1337/EfficientSecur
 
 ### 4. Kører EST-Mobile
 `EST-Mobile` må godt køres nu ved at trykke *start*.
+
+<br />
+
+
+# Nugets & .NET version
+Under ses dokumentation for de nugets der er brugt med version, samt hvilken .NET version.
+
+## MobileApp
+
+.NET Standard 2.0
+
+```xml
+    <PackageReference Include="IdentityModel.OidcClient" Version="3.1.2" />
+    <PackageReference Include="MonkeyCache.FileStore" Version="1.6.3" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2401" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.2" />
+```
+
+## MobileApp.Android
+
+```xml
+    <PackageReference Include="MonkeyCache.FileStore">
+          <Version>1.6.3</Version>
+        </PackageReference>
+        <PackageReference Include="Plugin.CurrentActivity">
+          <Version>2.1.0.4</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.CommunityToolkit">
+          <Version>2.0.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2401" />
+        <PackageReference Include="Xamarin.Essentials" Version="1.7.2" />
+```
+
+## MobileApp.iOS
+
+```xml
+     <PackageReference Include="MonkeyCache.FileStore">
+          <Version>1.6.3</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.CommunityToolkit">
+          <Version>2.0.1</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2401" />
+        <PackageReference Include="Xamarin.Essentials" Version="1.7.2" />
+```
 
 <br />
 
