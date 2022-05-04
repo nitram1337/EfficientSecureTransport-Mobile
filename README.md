@@ -219,7 +219,6 @@ Kører [Efficient Secure Transport](https://github.com/nitram1337/EfficientSecur
 </div>
 Mock-ups blev lavet med <a href="https://www.figma.com/">Figma</a>. Et open-source værktøj til at designe logoer, WebUI og MobileUI.
 
-
 <br />
 
 
