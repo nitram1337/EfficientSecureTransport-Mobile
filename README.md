@@ -217,7 +217,7 @@ Kører [Efficient Secure Transport](https://github.com/nitram1337/EfficientSecur
     <img src="https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Screens/EST_MobileApp_All_Routes_Page.png" height="380" />
     <img src="https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/Screens/EST_MobileApp_My_Profile_Page.png" height="380" />
 </div>
-Mock-ups blev lavet med [figma](https://www.figma.com). Et open-source værktøj til at designe logoer, WebUI og MobileUI.
+Mock-ups blev lavet med [figma](figma.com). Et open-source værktøj til at designe logoer, WebUI og MobileUI.
 
 
 <br />
