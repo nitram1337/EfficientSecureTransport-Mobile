@@ -192,7 +192,7 @@ Kører [Efficient Secure Transport](https://github.com/nitram1337/EfficientSecur
 
 ### 3. Kører runAdb.ps1
 `EST-Mobile` har en powershell script som vil køre adb kommandoer automatisk for dig. Scriptet  *runAdb.ps1* findes ind i `EST-Mobile` solution ind i mappen *Adb*.
- >**Note:** Du kan evt. bruge [Web Compiler](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebCompiler) extension for hurtigt at køre scriptet ved at højreklikke. <br />
+ >**Note:** Du kan evt. bruge [Web Compiler](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebCompiler) extension for hurtigt at køre scriptet ved at højreklikke på scriptet. <br />
 `EST-Mobile | Adb solution folder | hørjeklik på runAdb.ps1 | Execute file`<br />
   >**Note:** Du skal IKKE lukke powershell fanen, ellers `EST-Mobile` kan ikke kontakte microservicer.
 
