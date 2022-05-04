@@ -25,8 +25,8 @@ Her under vises et technical diagram for at forstå hvordan hele systemet er byg
 Hele arkitekturen består af fire dele:
   - En mobilapp bygget ved hjælp af frameworket: [Xamarin.Forms](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/) som kan køres på Android og iOS.
   - En webapp bygget ved hjælp af frameworket: [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-6.0) med page-based model: [Razor Pages](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-6.0&tabs=visual-studio) 
-  - Fire .NET Web-API [microservices](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/microservices-architecture) bygget ved hjælp af [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-6.0)
-  - En .NET Web-API bygget ved hjælp af [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-6.0)
+  - Fire .NET Web-API [microservices](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/microservices-architecture) bygget ved hjælp af frameworket [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-6.0)
+  - En .NET Web-API bygget ved hjælp af frameworket [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-6.0)
 
 `EST-Mobile` arkitekturen består af:
   - En [powershell](https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.2) script som sørg for at kører [adb](https://docs.microsoft.com/en-us/dual-screen/android/emulator/adb) komandoer, sådan at `EST-Mobile` kan nå [Identity microservice](https://github.com/nitram1337/EfficientSecureTransport/tree/master/EST.API.IdentityMS) og de 3 microservices via API Gateway.
