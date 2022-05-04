@@ -160,7 +160,7 @@ Kører [Efficient Secure Transport](https://github.com/nitram1337/EfficientSecur
 
 # Troubleshooting
 ### **Server kan ikke nåes i øjeblikket. Prøv igen senere.**
-![](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/EST_Mobileapp_Toubleshooting_1.png)
+![](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/EST_Mobileapp_Toubleshooting_1.png)<br />
 Hvis du får det her fejl, så er det fordi:
 - Du har glemt at kører **runAdb.ps1** eller du har lukket powershell fanen.
 - Du har glemt at kører [Efficient Secure Transport](https://github.com/nitram1337/EfficientSecureTransport)
@@ -169,7 +169,7 @@ Hvis du får det her fejl, så er det fordi:
 
 ### **ADB0010: Mono.AndroidTools.InstallFailedException:**
 ![](https://github.com/nitram1337/EfficientSecureTransport-Mobile/blob/master/Images/EST_Mobileapp_Troubleshooting_2.png)
-Hvis du får det her fejl, så er det fordi *WebAuthenticatorCallbackActivity* understøtter den nyeste **Android** version. <br />
+Hvis du får det her fejl, så er det fordi *WebAuthenticatorCallbackActivity* understøtter ikke den nyeste **Android** version. <br />
 `EST-Mobile` har brugt det er **Android 11.0 - R** 
 
 <br />
