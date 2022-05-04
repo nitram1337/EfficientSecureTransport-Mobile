@@ -113,16 +113,16 @@ Vi anbefaler at du bruger den nyeste [Visual studio IDE](https://visualstudio.mi
 ### 2. Forbedre Android emulator performance med virtualisering
 Virtualisering kan forbedre performance på **Android Emulator**, du kan bruge en af de følgende virtualisering teknologier: 
 - **Hyper-V**
-- Intel HAXM
+- **Intel HAXM**
 
-Længere ned du kan finde en kort forklaring til hvordan man kan kontroller, om din PC understøtter Hyper-V og hvordan du aktiver det. <br />
+Længere ned du kan finde en kort forklaring til hvordan man kontroller, om din PC understøtter Hyper-V og hvordan du aktiver det. <br />
 Hvis du vil gerne vide mere, du kan læse [Hardware Acceleration for emulator performance (Hyper-V & HAXM)](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?pivots=windows) artiklen.
 
 - Kontroller om, din PC hardware og software er kompatibel med *Hyper-V*  
 `Windows Start | CMD | systeminfo`
 Der skal stå *Yes* ud for alle fire Hyper-V Requirements eller: *A hypervisor has been detected. Features required for Hyper-V will not be displayed.*
 - Kontroller om, *Hyper-V* og *Windows Hypervisor Platform* er aktiveret.
-`Windows Start | Turn Windows features on or off | sæt flueben ved Hyper-V og Windows Hypervisor Platform`
+`Windows Start | Turn Windows features on or off | flueben skal være ved Hyper-V og Windows Hypervisor Platform`
 
 > **Note:** En genstart for at fuldføre aktivering, er påkrævet!
 <br />
@@ -192,9 +192,9 @@ Kører [Efficient Secure Transport](https://github.com/nitram1337/EfficientSecur
 
 ### 3. Kører runAdb.ps1
 `EST-Mobile` har en powershell script som vil køre adb kommandoer automatisk for dig. Scriptet  *runAdb.ps1* findes ind i `EST-Mobile` solution ind i mappen *Adb*.
- >**Note:** Du kan evt. bruge [Web Compiler](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebCompiler) extension for hurtigt at køre scriptet ved at højreklikke.
- `EST-Mobile | Adb solution folder | hørjeklik på runAdb.ps1 | Execute file`
-  >**Note:** Du skal IKKE lukke powershell fanen, eller så `EST-Mobile` kan ikke nå microservicer.
+ >**Note:** Du kan evt. bruge [Web Compiler](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebCompiler) extension for hurtigt at køre scriptet ved at højreklikke. <br />
+`EST-Mobile | Adb solution folder | hørjeklik på runAdb.ps1 | Execute file`<br />
+  >**Note:** Du skal IKKE lukke powershell fanen, ellers `EST-Mobile` kan ikke kontakte microservicer.
 
 <br />
 
